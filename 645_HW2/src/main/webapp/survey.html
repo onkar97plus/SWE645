@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" style="background-color: #006633;margin: 136px;margin-top: -16px; margin-bottom:5px">
+<head>
+    <meta charset="utf-8" />
+    <title>Survey</title>
+
+    <style>
+
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            margin-top: -20px;
+        }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                .topnav a.active {
+                    background-color: #006633;
+                    color: white;
+                }
+
+        .pg {
+            padding-left: 544px;
+            padding-right: 255px;
+            text-align:left;
+        }
+
+        .bor {
+            width: 221px;
+            text-align:center;
+            border: 5px solid #006633;
+            padding: 10px;
+            margin: 20px;
+            box-shadow: #ffcc33;
+            box-shadow: 7px 5px #ffcc33;
+        }
+
+
+        /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body {
+            font-family: Verdana;
+            text-align: left;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+            /* Styling form-control Label */
+            .form-control label {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            /* Styling form-control input,
+        select, textarea */
+            .form-control input,
+            .form-control select,
+            .form-control textarea {
+                border: 1px solid #777;
+                border-radius: 2px;
+                font-family: inherit;
+                padding: 10px;
+                display: block;
+                width: 95%;
+            }
+
+                /* Styling form-control Radio
+        button and Checkbox */
+                .form-control input[type="radio"],
+                .form-control input[type="checkbox"] {
+                    display: inline-block;
+                    width: auto;
+                }
+
+        /* Styling Button */
+        button {
+            background-color: #006633;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            color: white;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .required{
+            color: red;
+        }
+
+        .footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: right;
+            margin-top: 60px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- ======= Enabling the background gradient color effect======= -->
+    <div style="background-color: white; padding: 5px; padding-top: 0px; background-image: linear-gradient(180deg, #fffdf6, #ffd65b4f) ">
+
+        <header>
+            <div class="padded-row">
+                <div id="cs-logo">
+                    <h1 style="background-color: white; background-image: linear-gradient(180deg, #ffcc33 , transparent)">
+                        <img class="img-logo" src="./images/dlogo.png" alt="GMU CS Department">
+
+                    </h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- ======= Declaring the top nav bar tabs======= -->
+
+        <div class="topnav">
+            <a class="active" href="./survey.html">Survey</a>
+        </div>
+        <center>
+            <div class="cont">
+                <h2 class="pg bor">Survey Form</h2>
+            </div>
+        </center>
+        <form id="form" onsubmit="return getval(event);">
+
+            <!-- User details -->
+
+            <div class="form-control">
+                <label for="fname" id="label-uname">
+                    First Name <span class="required">*</span>
+                </label>
+
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="fname" required
+                       autofocus
+                       placeholder="Enter your first name" />
+            </div>
+
+            <div class="form-control">
+                <label for="lname" id="label-uname">
+                    Last Name <span class="required">*</span>
+                </label>
+
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="lname" required
+                       autofocus
+                       placeholder="Enter your last name" />
+            </div>
+
+            <div class="form-control">
+                <label for="email" id="label-email">
+                    Email <span class="required">*</span>
+                </label>
+
+                <!-- Input Type Email-->
+                <input type="email"
+                       id="email" required
+                       placeholder="abc@xyz.com" />
+            </div>
+
+            <div class="form-control">
+                <label for="address" id="label-address">
+                    Street Address <span class="required">*</span>
+                </label>
+
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="age" required
+                       placeholder="Enter your address" />
+            </div>
+
+            <div class="form-control">
+                <label for="city" id="label-city">
+                    City <span class="required">*</span>
+                </label>
+
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="city" required
+                       placeholder="Enter your city" />
+            </div>
+
+            <div class="form-control">
+                <label for="state" id="label-state">
+                    State <span class="required">*</span>
+                </label>
+
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="state" required
+                       placeholder="Enter your state" />
+            </div>
+
+            <div class="form-control">
+                <label for="zip" id="label-zip">
+                    Zip code <span class="required">*</span>
+                </label>
+
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="zip" required
+                       pattern="[0-9]{5}"
+                       placeholder="Enter 5 digit Zip code" />
+            </div>
+
+            <div class="form-control">
+                <label for="telephone" id="label-tele">
+                    Telephone <span class="required">*</span>
+                </label>
+
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="tele" required
+                       pattern="[1-9]{3}-[0-9]{4}-[0-9]{3}"
+                       placeholder="123-4567-890" />
+            </div>
+
+            <div class="form-control">
+                <label for="date" id="label-date">
+                    Date of Survey <span class="required">*</span>
+                </label>
+
+                <!-- Input Type date-->
+                <input type="date"
+                       id="date" required
+                       placeholder="mm/dd/yyyy" />
+            </div>
+
+            <!-- ======= Creating check boxes ======= -->
+
+            <div class="form-control">
+                <label>
+                    What did you like the most?
+                </label>
+                <!-- Input Type Checkbox -->
+                <label for="inp-1">
+                    <input type="checkbox"
+                           name="inp">Students</input>
+                </label>
+                <label for="inp-2">
+                    <input type="checkbox"
+                           name="inp">Location</input>
+                </label>
+                <label for="inp-3">
+                    <input type="checkbox"
+                           name="inp">Campus</input>
+                </label>
+                <label for="inp-4">
+                    <input type="checkbox"
+                           name="inp">Atmosphere</input>
+                </label>
+                <label for="inp-5">
+                    <input type="checkbox"
+                           name="inp">Dorm rooms</input>
+                </label>
+                <label for="inp-6">
+                    <input type="checkbox"
+                           name="inp">Sports</input>
+            </div>
+
+            <!-- ======= Creating radio buttons ======= -->
+
+            <div class="form-control">
+                <label>
+                    How did you get to know about GMU
+                </label>
+
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">Friends</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Television</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Internet</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Other</input>
+                </label>
+            </div>
+
+            <div class="form-control">
+                <label for="rate" id="label-rate">
+                    Recommend likelihood
+                </label>
+
+                <!-- Dropdown options -->
+                <select name="rate" id="rate">
+                    <option value="Very Likely">
+                        Very Likely
+                    </option>
+                    <option value="student">Likely</option>
+                    <option value="intern">Unlikely</option>
+
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label for="raffle" id="label-raffle">
+                    Raffle 
+                </label>
+
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="raffle"
+                       placeholder="Enter numbers ranging from 1 to 100; Ex: 1,91,65.." />
+
+                <script>
+
+                    function getval(event) {
+                        console.log(event)
+                        event.preventDefault();
+                        var val;
+                        var success = [1, 2, 3, 4];
+                        val = document.getElementById("raffle").value;
+
+                        var values = val.split(",");
+                        var flag = 0;
+
+                        for (let i = 0; i < success.length; i++) {
+                            for (let j = 0; j < values.length; j++) {
+                                if (success[i] == values[j]) {
+                                    alert("Hurray, you won a free movie ticket!");
+                                    flag = 1;
+                                    event.target.reset();
+                                    break;
+                                }
+                            }
+                            if (flag) break
+                        }
+
+                        if (flag == 0) {
+                            alert("Form Submitted");
+                        }
+                        event.target.reset();
+                    }
+
+
+                </script>
+
+            </div>
+
+            <div class="form-control">
+                <label for="comment">
+                    Additional comments
+                </label>
+
+                <!-- multi-line text input control -->
+                <textarea name="comment" id="comment"
+                          placeholder="Enter your comment here">
+            </textarea>
+            </div>
+
+            <!-- Multi-line Text Input Control -->
+            <button type="submit" value="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+
+    <!-- ======= Footer Section that contains hyperlink to the GMU CS department ======= -->
+
+    <div class="footer">
+        <p>
+            <a href="https://cs.gmu.edu/">
+                <img src="./images/GMU_PLogo.png" alt="GMU footer logo" width="200" height="200" />
+            </a>
+        </p>
+    </div>
+
+</body>
+</html>
