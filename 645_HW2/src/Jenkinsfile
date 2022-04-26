@@ -12,7 +12,7 @@ pipeline {
 					sh 'jar -cvfStudentSurvey.war -C WebContent/ .'
 					sh 'echo ${BUILD_TIMESTAMP}'
 					sh "docker login -u onkar97 -p ${DOCKERHUB_PASS}"
-					def customImage = docker.build("onkar97/studentsurvey645:${BUILD_TIMESTAMP}")
+					def customImage = docker.build("onkar97/swe645:${BUILD_TIMESTAMP}")
 					
 				}
 			}
