@@ -1,8 +1,6 @@
 pipeline {
 	agent any
-	environment {
-		D_PASS = credentials('Counterstrike@12')
-	}
+
 	stages {
 		stage("Building the Student Survey Image") {
 			steps {
@@ -11,7 +9,7 @@ pipeline {
 					sh 'rm -rf *.war'
 					sh 'jar -cvf StudentSurvey.war *'
 					sh 'echo ${BUILD_TIMESTAMP}'
-					sh "docker login -u onkar97 -p ${D_PASS}"
+					sh "docker login -u onkar97 -p Counterstrike@12"
 					def customImage = docker.build("onkar97/jkswe645:${BUILD_TIMESTAMP}")
 					
 				}
