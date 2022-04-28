@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-		pass = "Counterstrike@12"
+		pass = credentials('PASSWORD')
 	}
 	stages {
 		stage("Building the Student Survey Image") {
