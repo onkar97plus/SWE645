@@ -11,7 +11,7 @@ pipeline {
 					sh 'rm -rf *.war'
 					sh 'jar -cvf StudentSurvey.war *'
 					sh 'echo ${BUILD_TIMESTAMP}'
-					sh "docker login -u onkar97 -p $pass"
+					sh 'docker login -u onkar97 -p $pass'
 					def customImage = docker.build("onkar97/jkswe645:${BUILD_TIMESTAMP}")
 					
 				}
