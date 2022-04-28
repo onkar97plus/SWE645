@@ -1,6 +1,8 @@
 pipeline {
 	agent any
-
+	environment {
+		D_PASS = credentials('Counterstrike@12')
+	}
 	stages {
 		stage("Building the Student Survey Image") {
 			steps {
