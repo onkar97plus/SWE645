@@ -36,7 +36,7 @@ pipeline {
 			steps {
 // 				sh 'kubectl create deployment nginx --image=nginx'
 // 				sh 'sudo su jenkins'
-				sh 'sudo kubectl set image deployment/swe645 swe645=onkar97/dockerhub:${BUILD_TIMESTAMP} -n jenkins'
+				sh 'kubectl set image deployment/swe645 swe645=onkar97/dockerhub:${BUILD_TIMESTAMP} -n jenkins'
 			}
 		}
 		stage("Deploying to Rancher as with load balancer") {
