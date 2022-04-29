@@ -12,6 +12,7 @@ pipeline {
 					sh 'jar -cvf StudentSurvey.war -C 645_HW2/src/main/webapp/ .'
 					sh 'echo ${BUILD_TIMESTAMP}'
 					sh 'echo ${BUILD_ID}'
+					sh 'pwd'
 					sh 'docker login -u onkar97 -p $pass'
 					sh 'docker build https://github.com/onkar97plus/SWE645/blob/571e0f47d0a634b3cc72c0f2596692005ed63249/645_HW2/src/Dockerfile'
 					
