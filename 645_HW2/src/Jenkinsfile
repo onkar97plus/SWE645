@@ -12,7 +12,7 @@ pipeline {
 					sh 'jar -cvf StudentSurvey.war -C 645_HW2/src/main/webapp/ .'
 					sh 'echo ${BUILD_TIMESTAMP}'
 					sh 'docker login -u onkar97 -p $pass'
-					sh 'docker build -f Dockerfile -t onkar97/dockerhub:1.6 .'
+					sh 'docker build -f Dockerfile .'
 					
 				}
 			}
