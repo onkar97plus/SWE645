@@ -1,2 +1,2 @@
 FROM tomcat:9.0-jdk15
-COPY StudentSurvey.war /var/lib/jenkins/workspace/jenkins/
+COPY StudentSurvey.war /var/lib/jenkins/workspace/jenkins/StudentSurvey.war
