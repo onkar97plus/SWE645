@@ -17,7 +17,7 @@ pipeline {
 					sh 'cd 645_HW2/src'
 					sh 'ls -l'
 					sh 'pwd'
-					sh 'docker build -t onkar97/dockerhub:1.6 .'
+					sh 'docker build -t onkar97/dockerhub:1.6 645_HW2/src/'
 // 					sh 'docker build https://github.com/onkar97plus/SWE645/blob/571e0f47d0a634b3cc72c0f2596692005ed63249/645_HW2/src/Dockerfile'
 					
 				}
