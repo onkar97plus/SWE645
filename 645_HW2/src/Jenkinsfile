@@ -34,7 +34,7 @@ pipeline {
 		}
 		stage("Deploying to Rancher as single pod") {
 			steps {
-				sh 'kubectl set image deployment/student-survey-lb student-survey-lb=onkar97/dockerhub:1.6 -n jenkins-pipeline'
+				sh 'kubectl set image deployment/project-swe project-swe=onkar97/dockerhub:1.6 -n jenkins-pipeline'
 			}
 		}
 		stage("Deploying to Rancher as with load balancer") {
