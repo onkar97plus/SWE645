@@ -35,6 +35,7 @@ pipeline {
 		stage("Deploying to Rancher as single pod") {
 			steps {
 // 				sh 'kubectl create deployment nginx --image=nginx'
+				sh 'sudo su jenkins'
 				sh 'kubectl set image deployment/swe645 swe645=onkar97/dockerhub:${BUILD_TIMESTAMP} -n jenkins'
 			}
 		}
