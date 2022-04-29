@@ -15,7 +15,7 @@ pipeline {
 					sh 'docker login -u onkar97 -p $pass'
 					sh 'tree -d .'
 					sh 'cd 645_HW2/src'
-					sh 'tree -d .'
+					sh 'ls -R | grep ":$" | sed -e \'s/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/\''
 					sh 'docker build -t onkar97/dockerhub:1.6 .'
 // 					sh 'docker build https://github.com/onkar97plus/SWE645/blob/571e0f47d0a634b3cc72c0f2596692005ed63249/645_HW2/src/Dockerfile'
 					
