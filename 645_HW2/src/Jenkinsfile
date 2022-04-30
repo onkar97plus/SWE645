@@ -37,7 +37,8 @@ pipeline {
 // 				sh 'kubectl create deployment nginx --image=nginx'
 // 				sh 'sudo su jenkins'
 				sh 'kubectl version'
-				sh 'kubectl get namespaces'
+				sh 'kubectl auth can-i get namespaces'
+				
 				sh 'sudo kubectl set image deployment/swe645 swe645=onkar97/dockerhub:${BUILD_TIMESTAMP} -n jenkins'
 			}
 		}
