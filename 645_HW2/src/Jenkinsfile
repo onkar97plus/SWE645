@@ -44,7 +44,7 @@ pipeline {
 		}
 		stage("Deploying to Rancher as with load balancer") {
 			steps {
-				sh 'kubectl set image deployment/studentsurvey645-lb studentsurvey645-lb=onkar97/dockerhub:1.6 -n jenkins-pipeline'
+				sh 'kubectl set image deployment/student-loadbalancer student-loadbalancer=onkar97/dockerhub:1.6 -n project'
 			}
 		}
 	}
