@@ -8,6 +8,7 @@ pipeline {
 			steps {
 				script {
 					checkout scm
+					sh 'chmod 666 /var/run/docker.sock'
 					sh 'rm -rf *.war'
 					sh 'jar -cvf StudentSurvey.war -C 645_HW2/src/main/webapp/ .'
 					sh 'mv StudentSurvey.war 645_HW2/src/'
